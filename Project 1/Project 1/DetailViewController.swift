@@ -18,8 +18,8 @@ class DetailViewController: UIViewController {
         title = selectedImage
         navigationItem.largeTitleDisplayMode = .never
 
-        if let imageToLoad = selectedImage {
-            imageView.image = UIImage(named: imageToLoad)
+        if let imageToLoad = selectedImage { //checks and unwrapps the selectedImage optional
+            imageView.image = UIImage(named: imageToLoad) //selectedImage will be placed inside imageToLoad, then pass a UIImage and load.
         }
     }
     
@@ -29,7 +29,7 @@ class DetailViewController: UIViewController {
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+        super.viewWillDisappear(animated)
         navigationController?.hidesBarsOnTap = false
     }
 

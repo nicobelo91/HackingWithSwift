@@ -34,16 +34,18 @@ class ViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return pictures.count
     }
-    //               tableview is making the request
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    //               tableview is making the request    specifies the row number
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell { //the returned UITableViewCell value is "Picture"
         let cell = tableView.dequeueReusableCell(withIdentifier: "Picture", for: indexPath)
-        //gives the text label the same name as the picture in the cell
+        //gives the text label the same name as the picture in the array
         cell.textLabel?.text = pictures[indexPath.row]
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let vc = storyboard?.instantiateViewController(identifier: "Detail") as? DetailViewController {
+        //                      if it asked for "Detaildddd" it fails because it doesn't exist
+        if let vc = storyboard?.instantiateViewController(identifier: "Detail") as? DetailViewController { //typcasted as DetailViewController. Otherwise, we get a regular ViewController
+        // if the code above fails, the following two lines won't execute
             vc.selectedImage = pictures[indexPath.row]
             navigationController?.pushViewController(vc, animated: true)
         }
