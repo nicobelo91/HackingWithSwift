@@ -3,10 +3,38 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "ViewController.buttonTapped(_:):ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "sender.tag">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "ViewController.askQuestion():ViewController.swift">
          <PersistentStrings>
             <PersistentString
                value = "countries[0]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ViewController.askQuestion(action:):ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "countries[2]">
+            </PersistentString>
+            <PersistentString
+               value = "countries[0]">
+            </PersistentString>
+            <PersistentString
+               value = "correctAnswer">
+            </PersistentString>
+            <PersistentString
+               value = "title">
+            </PersistentString>
+            <PersistentString
+               value = "countries[1]">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
