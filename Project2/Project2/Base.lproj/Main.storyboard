@@ -40,6 +40,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="POB-Pj-QiD"/>
                     <connections>
+                        <outlet property="button1" destination="fAI-0S-PaZ" id="X5j-2J-Sj0"/>
+                        <outlet property="button2" destination="Jdd-kw-xYi" id="pck-97-h2d"/>
                         <outlet property="button3" destination="MKp-wq-dsp" id="J7S-Il-iCr"/>
                     </connections>
                 </viewController>
