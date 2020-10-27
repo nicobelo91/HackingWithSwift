@@ -17,6 +17,8 @@ class ViewController: UITableViewController {
         title = "Storm Viewer"
         navigationController?.navigationBar.prefersLargeTitles = true
         
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(shareApp))
+        
         let fm = FileManager.default
         let path = Bundle.main.resourcePath!
         let items = try! fm.contentsOfDirectory(atPath: path)
@@ -50,5 +52,11 @@ class ViewController: UITableViewController {
             vc.selectedImage = pictures[indexPath.row]
             navigationController?.pushViewController(vc, animated: true)
         }
+    }
+    
+     @objc func shareApp() {
+        let avc = UIActivityViewController(activityItems: ["www.hackingwithswift.com"], applicationActivities: [])
+        avc.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
+        present (avc, animated: true)
     }
 }
